@@ -1,3 +1,4 @@
+
 package at.codersbay.katas;
 
 public class Main {
@@ -11,6 +12,7 @@ public class Main {
         // eg.: TicTacToe.printField("X", "", "O", "", "", "", "X", "X", "O");
 
         BingoCard.getCard();
+        EvenOrOdd.printResult((int) ((Math.random()*99+1))); 
         
     }
 
