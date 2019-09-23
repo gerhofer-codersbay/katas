@@ -1,4 +1,3 @@
-
 package at.codersbay.katas;
 
 public class Main {
@@ -11,17 +10,27 @@ public class Main {
         // eg.: TicTacToe.printRandomField();
         // eg.: TicTacToe.printField("X", "", "O", "", "", "", "X", "X", "O");
 
-
+        // BingoCard drucken      
+        BingoCard.getCard();
+        EvenOrOdd.printResult((int) ((Math.random()*99+1))); 
         
+        // Validitaet der Kreditkarte ueberpruefen
+        System.out.println("Die Kreditkarte wird auf gueltigkeit ueberprueft:");
+        
+        CreditCardValidator Manuel = new CreditCardValidator();
+        
+        CreditCardValidator.checkValidity(123);
+                
+        System.out.println("Rueckgabewert der Variable isValide: " + CreditCardValidator.isValide);
+        
+        // Medianwert eines Array bestimmen
         ArrayMedian_01 medianArray = new ArrayMedian_01();
         
         medianArray.arrayMedian_01();
      
-
         BingoCard.getCard();
         EvenOrOdd.printResult((int) ((Math.random()*99+1))); 
 
-        
     }
 
 }
