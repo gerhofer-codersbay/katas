@@ -66,7 +66,6 @@ public class BingoCard {
 		
 	}
 	
-	
 	private static int getRandomNumberInRange(int min, int max) {
 
 		if (min >= max) {
@@ -76,8 +75,6 @@ public class BingoCard {
 		Random r = new Random();
 		return r.nextInt((max - min) + 1) + min;
 	}
-	
-	
 	
 	private static int placeRandomNumber(int[] row, int pos, int number, int min, int max)
 	{
