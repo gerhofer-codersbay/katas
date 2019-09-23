@@ -1,4 +1,3 @@
-
 package at.codersbay.katas;
 
 public class Main {
@@ -13,6 +12,15 @@ public class Main {
 
         BingoCard.getCard();
         EvenOrOdd.printResult((int) ((Math.random()*99+1))); 
+        
+        // Validitaet der Kreditkarte ueberpruefen
+        System.out.println("Die Kreditkarte wird auf gueltigkeit ueberprueft:");
+        
+        CreditCardValidator Manuel = new CreditCardValidator();
+        
+        CreditCardValidator.checkValidity(123);
+                
+        System.out.println("Rueckgabewert der Variable isValide: " + CreditCardValidator.isValide);
         
     }
 
