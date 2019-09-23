@@ -1,8 +1,15 @@
 package at.codersbay.katas;
 
+
+
 public class Main {
 
-    public static void main(String[] args) {
+
+
+	
+
+
+	public static void main(String[] args) {
 
         System.out.println("After you finished your Kata, make sure to call it from the main class to show us what you've done!");
 
@@ -10,6 +17,15 @@ public class Main {
         // eg.: TicTacToe.printRandomField();
         // eg.: TicTacToe.printField("X", "", "O", "", "", "", "X", "X", "O");
 
+        ArrayMean arrayMean = new ArrayMean();
+        ArrayMean.calcArravg();
+     
+      
+        
+
     }
 
+
+
+	
 }
