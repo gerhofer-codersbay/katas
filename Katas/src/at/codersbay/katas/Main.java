@@ -10,6 +10,12 @@ public class Main {
         // eg.: TicTacToe.printRandomField();
         // eg.: TicTacToe.printField("X", "", "O", "", "", "", "X", "X", "O");
 
+        
+        ArrayMedian_01 medianArray = new ArrayMedian_01();
+        
+        medianArray.arrayMedian_01();
+     
+        
     }
 
 }
