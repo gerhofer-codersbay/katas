@@ -1,5 +1,7 @@
 package at.codersbay.katas;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -9,6 +11,11 @@ public class Main {
         // falls du eine TicTacToe klasse geschrieben hast die mit einer statischen Methode ein Tic Tac Toe feld auf die Konsole drucken kann könnte das so aussehen:
         // eg.: TicTacToe.printRandomField();
         // eg.: TicTacToe.printField("X", "", "O", "", "", "", "X", "X", "O");
+        
+        String tester;
+        tester = "ab";
+        tester = "aabb";
+        System.out.println(Arrays.toString(PermutationGenerator.permutate(tester)));
 
     }
 
