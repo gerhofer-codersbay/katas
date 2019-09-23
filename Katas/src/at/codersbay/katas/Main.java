@@ -11,7 +11,7 @@ public class Main {
         // eg.: TicTacToe.printField("X", "", "O", "", "", "", "X", "X", "O");
         
        
-        OddOrEven.printResult((int) ((Math.random()*99+1))); //takes an integer as parameter
+        EvenOrOdd.printResult((int) ((Math.random()*99+1))); 
         
     }
 

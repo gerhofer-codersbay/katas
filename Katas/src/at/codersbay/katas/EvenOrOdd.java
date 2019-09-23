@@ -9,7 +9,7 @@ package at.codersbay.katas;
  * 
  * contact: mario.oberwalder@gmail.com
  */
-public class OddOrEven {
+public class EvenOrOdd {
 
 	/**
 	 * Prints the intro.
