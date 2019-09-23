@@ -10,6 +10,8 @@ public class Main {
         // eg.: TicTacToe.printRandomField();
         // eg.: TicTacToe.printField("X", "", "O", "", "", "", "X", "X", "O");
 
+        BingoCard.getCard();
+        
     }
 
 }
