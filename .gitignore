@@ -1,0 +1,11 @@
+bb 
+bb 
+bb 
+.idea/
+out/
+/bin/
+.classpath
+.gitignore
+.project
+download.sh
+upload.sh
