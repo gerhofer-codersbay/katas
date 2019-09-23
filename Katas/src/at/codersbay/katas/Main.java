@@ -1,4 +1,6 @@
-import Leetspeak.Leetspeak;
+package at.codersbay.katas;
+
+import at.codersbay.katas.leetspeak.Leetspeak;
 
 /**
  * @package: PACKAGE_NAME;

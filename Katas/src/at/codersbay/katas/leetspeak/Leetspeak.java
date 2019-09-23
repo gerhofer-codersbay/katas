@@ -1,4 +1,4 @@
-package Leetspeak;
+package at.codersbay.katas.leetspeak;
 
 /**
  * @package: Leetspeak;
