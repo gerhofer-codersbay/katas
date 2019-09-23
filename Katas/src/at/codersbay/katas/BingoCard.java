@@ -69,6 +69,7 @@ public class BingoCard {
 		
 	}
 	
+
 	/**
 	 * Generate a random number with the given range
 	 * @param min the min value
@@ -85,6 +86,7 @@ public class BingoCard {
 		return r.nextInt((max - min) + 1) + min;
 	}
 	
+
 	/**
 	 * Place a number and checks if the number previosly exists (to make sure so we dont have any dupliactes)
  	 * @param row the array to check
