@@ -7,6 +7,7 @@ package Leetspeak;
  */
 public class Leetspeak {
     public String fromString(String text) {
+        text=text.toLowerCase();
         String leetspeak="";
         for (int i = 0; i < text.length(); i++) {
             char charAtI=text.charAt(i);

@@ -8,7 +8,7 @@ import Leetspeak.Leetspeak;
 public class Main {
     public static void main(String[] args) {
         Leetspeak leetspeak = new Leetspeak();
-        System.out.println(leetspeak.fromString(" My text is long and beautiful, as, it has been well documented, " +
+        System.out.println(leetspeak.fromString("My text is long and beautiful, as, it has been well documented, " +
                 "are various other parts of my website.Lorem Ispum is a choke artist. It chokes! Some people have an " +
                 "ability to write placeholder text... It's an art you're basically born with. You either have it or " +
                 "you don't. I think the only difference between me and the other placeholder text is that I’m more " +
