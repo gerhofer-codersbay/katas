@@ -14,10 +14,12 @@ public class PermutationGenerator {
 	
 	public static String[] listOfPermutations(String input) {
 		
-		 
+		/*
+		 * refine: change array in place and handle stuff with found var?
+		 * or do without that found var altogether?
+		 */
 		
-//		System.out.println(input);
-		char[] chars = input.toCharArray();
+		 char[] chars = input.toCharArray();
 //		chars = Arrays.sort(chars);
 //		char[] chars = Arrays.sort(input.toCharArray());
 		// first permutation is the sorted array.
@@ -27,7 +29,7 @@ public class PermutationGenerator {
 		List<String> permutationsAsList = new ArrayList<String>();
 		
 		// how to convert back to a String
-		String first = new String(chars);
+//		String first = new String(chars);
 //		char[] secondAsChars = nextPermutation(chars);
 //		String second = new String(secondAsChars);
 		
@@ -63,7 +65,7 @@ public class PermutationGenerator {
 		
 		char[] result = Arrays.copyOf(input,input.length);
 		
-		System.out.println("generating next permutation...");
+//		System.out.println("generating next permutation...");
 //		input = new char[] {'d','u'};
 //		System.out.println(input);
 
@@ -80,36 +82,37 @@ public class PermutationGenerator {
 //		System.out.println("position of find: " + pos);
 		
 		if (found) {
+			System.out.println("found in " + Arrays.toString(result));
 			char placeholder;
 			
 			
 			
 			// reverse everything from input[pos] to the end
 			
-			System.out.println("reversing: " + Arrays.toString(result));
+//			System.out.println("reversing: " + Arrays.toString(result));
 			
 			int left = pos;
 			int right = result.length - 1;
 			
 			while (left < right) {
-				System.out.println(left + " -> " + result[left] + ", " + right + " -> " + result[right]);
+//				System.out.println(left + " -> " + result[left] + ", " + right + " -> " + result[right]);
 				placeholder = result[left];
 				result[left] = result[right];
 				result[right] = placeholder;
 				left++;
 				right--;
 			}
-			System.out.println("reversed array: " + Arrays.toString(result));
+//			System.out.println("reversed array: " + Arrays.toString(result));
 			
 			// find the smallest element bigger than input[pos-1] and swap it with input[pos-1]
 			
-			System.out.println("swapping elements...");
+//			System.out.println("swapping elements...");
 			
 			left = pos - 1;
 			right = pos;
 			
 			while (result[left] >= result[right]) {
-				System.out.println("comparing " + result[left] + " with " + result[right]);
+//				System.out.println("comparing " + result[left] + " with " + result[right]);
 				right++;
 			}
 			placeholder = result[left];

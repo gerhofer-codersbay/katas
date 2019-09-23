@@ -20,10 +20,10 @@ public class Main {
 //        tester = "abcdezyxvut";
 //        tester = "678954321";
         tester = "1234";
-        tester = "1337";
-        tester = "a";
-        tester = "ab";
-        tester = "aabb";
+//        tester = "1337";
+//        tester = "a";
+//        tester = "ab";
+//        tester = "aabb";
         System.out.println(Arrays.toString(PermutationGenerator.listOfPermutations(tester)));
 
     }
