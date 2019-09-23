@@ -7,12 +7,12 @@ public  class ArrayMean {
 	public static void main(String[] args) {
 		
 	
-		calcArravg();
+		calcArrAvg();
 		
 
 	}
 
-	public static void calcArravg() {
+	public static void calcArrAvg() {
 		int meanArr[] = { 1, 66, 8, 77, 23, 44, 11, 49 };
 		int sumNr = 0;
 		for (int i = 0; i < meanArr.length; i++) { // errechnen der Gesamtsumme mit einer for Schleife
