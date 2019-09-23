@@ -7,37 +7,38 @@ package Leetspeak;
  */
 public class Leetspeak {
     public String fromString(String text) {
-        text=text.toLowerCase();
-        String leetspeak="";
+
+        String textLowerCase = text.toLowerCase();
+        String leetspeak = "";
         for (int i = 0; i < text.length(); i++) {
-            char charAtI=text.charAt(i);
-            switch (charAtI){
+            char charAtI = textLowerCase.charAt(i);
+            switch (charAtI) {
                 case 'a':
-                    leetspeak+="4";
+                    leetspeak += "4";
 
                     break;
                 case 'e':
-                    leetspeak+="3";
+                    leetspeak += "3";
 
                     break;
                 case 'l':
-                    leetspeak+="1";
+                    leetspeak += "1";
 
                     break;
                 case 'm':
-                    leetspeak+="/^^\\";
+                    leetspeak += "/^^\\";
 
                     break;
                 case 'o':
-                    leetspeak+="0";
+                    leetspeak += "0";
 
                     break;
                 case 'u':
-                    leetspeak+="(_)";
+                    leetspeak += "(_)";
 
                     break;
                 default:
-                    leetspeak+=text.charAt(i);
+                    leetspeak += text.charAt(i);
             }
 
         }
