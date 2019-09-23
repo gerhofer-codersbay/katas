@@ -18,7 +18,7 @@ public class Main {
         // eg.: TicTacToe.printField("X", "", "O", "", "", "", "X", "X", "O");
 
         ArrayMean arrayMean = new ArrayMean();
-        ArrayMean.calcArravg();
+        ArrayMean.calcArrAvg();
      
       
         
