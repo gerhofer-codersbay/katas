@@ -10,6 +10,7 @@ public class Main {
         // eg.: TicTacToe.printRandomField();
         // eg.: TicTacToe.printField("X", "", "O", "", "", "", "X", "X", "O");
 
+        // BingoCard drucken      
         BingoCard.getCard();
         EvenOrOdd.printResult((int) ((Math.random()*99+1))); 
         
@@ -22,6 +23,14 @@ public class Main {
                 
         System.out.println("Rueckgabewert der Variable isValide: " + CreditCardValidator.isValide);
         
+        // Medianwert eines Array bestimmen
+        ArrayMedian_01 medianArray = new ArrayMedian_01();
+        
+        medianArray.arrayMedian_01();
+     
+        BingoCard.getCard();
+        EvenOrOdd.printResult((int) ((Math.random()*99+1))); 
+
     }
 
 }
