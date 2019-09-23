@@ -33,22 +33,11 @@ public class BingoCard {
 		
 		for (int i = 0; i < rowB.length; i++) {
 			rowB[i] = placeRandomNumber(rowB, i+1, getRandomNumberInRange(1, 15), 1, 15);
-		}   
-		
-		for (int i = 0; i < rowI.length; i++) {
 			rowI[i] = placeRandomNumber(rowI, i+1, getRandomNumberInRange(16, 30), 16, 30);
-		}   
-		
-		for (int i = 0; i < rowN.length; i++) {
 			rowN[i] = placeRandomNumber(rowN, i+1, getRandomNumberInRange(31, 45), 31, 45);
-		}   
-		
-		for (int i = 0; i < rowG.length; i++) {
 			rowG[i] = placeRandomNumber(rowG, i+1, getRandomNumberInRange(46, 60), 46, 60);
-		}   
-		
-		for (int i = 0; i < rowO.length; i++) {
 			rowO[i] = placeRandomNumber(rowO, i+1, getRandomNumberInRange(61, 75), 61, 75);
+			
 		}   
 			
 		System.out.printf("%2s ", "B");
