@@ -88,7 +88,7 @@ public class BingoCard {
 	
 
 	/**
-	 * Place a number and checks if the number previosly exists (to make sure so we dont have any dupliactes)
+	 * Place a number and checks if the number previosly exists (to make sure so we don't have any dupliactes)
  	 * @param row the array to check
 	 * @param pos the current position in the array
 	 * @param number the number to confirm
