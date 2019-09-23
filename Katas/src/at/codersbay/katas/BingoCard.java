@@ -19,6 +19,9 @@ public class BingoCard {
 	private static int[] rowG;
 	private static int[] rowO;
 
+	/**
+	 * Generate a new bingo card with random numbers.
+	 */
 	public static void getCard()
 	{
 		rowB = new int[5];
@@ -66,6 +69,12 @@ public class BingoCard {
 		
 	}
 	
+	/**
+	 * Generate a random number with the given range
+	 * @param min the min value
+	 * @param max the max value
+	 * @return a number between min and max
+	 */
 	private static int getRandomNumberInRange(int min, int max) {
 
 		if (min >= max) {
@@ -76,6 +85,15 @@ public class BingoCard {
 		return r.nextInt((max - min) + 1) + min;
 	}
 	
+	/**
+	 * Place a number and checks if the number previosly exists (to make sure so we dont have any dupliactes)
+ 	 * @param row the array to check
+	 * @param pos the current position in the array
+	 * @param number the number to confirm
+	 * @param min min value
+	 * @param max max value
+	 * @return the number with will be unique
+	 */
 	private static int placeRandomNumber(int[] row, int pos, int number, int min, int max)
 	{
 		for (int i = 0; i < pos-1; i++) {
