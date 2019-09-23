@@ -21,7 +21,7 @@ public class CreditCardValidator {
     String creditCardNumber;
     
     
-    public void CreditCardValidator(int ccv) {
+    public void CreditCardUser(int ccv) {
 
         this.name = name;
         this.address = address;
