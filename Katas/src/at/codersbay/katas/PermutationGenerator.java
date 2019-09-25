@@ -12,120 +12,82 @@ import java.util.List;
  */
 public class PermutationGenerator {
 	
+	/**
+	 * 
+	 * @param input the string to be permutated
+	 * @return the permutations in an array
+	 */
 	public static String[] listOfPermutations(String input) {
 		
-		/*
-		 * refine: change array in place and handle stuff with found var?
-		 * or do without that found var altogether?
-		 */
-		
-		 char[] chars = input.toCharArray();
-//		chars = Arrays.sort(chars);
-//		char[] chars = Arrays.sort(input.toCharArray());
-		// first permutation is the sorted array.
+		char[] chars = input.toCharArray();
 		Arrays.sort(chars);
-		System.out.println(Arrays.toString(chars));
-		
+
 		List<String> permutationsAsList = new ArrayList<String>();
-		
-		// how to convert back to a String
-//		String first = new String(chars);
-//		char[] secondAsChars = nextPermutation(chars);
-//		String second = new String(secondAsChars);
-		
-		
-		
-//		String first = String.copyValueOf(chars);
-//		permutationsAsList.add(first);
-//		permutationsAsList.add(second);
-		
-		// once the permutation generator is in place, 
-		// loop through permutations as long as perm(i) != i
-		// and fill the list
-		char[] previous;
+		boolean newOneFound;
 		do {
 			permutationsAsList.add(new String(chars));
-			previous = chars;
-			chars = nextPermutation(previous);
-		} while (!Arrays.equals(chars, previous));
-// 		char[] nextOne = nextPermutation(chars);
-//		while (!Arrays.equals(chars, nextOne)) {
-//			permutationsAsList.add(new String(nextOne));
-//			chars = nextOne;
-//			nextOne = nextPermutation(chars);
-//		}
+			newOneFound = nextPermutation(chars);
+		} while (newOneFound);
 		
-//		String[] result =  permutationsAsList.toArray();
 		String[] result = permutationsAsList.toArray(new String[permutationsAsList.size()]);
 		
 		return result;
+		
 	}
 	
-	private static char[] nextPermutation(char[] input) {
+	public static String getNextPermutation(String input) {
+		char[] chars = input.toCharArray();
+		nextPermutation(chars);
+		String result = new String(chars);
+		return result;
+	}
+	
+	private static boolean nextPermutation(char[] chars) {
 		
-		char[] result = Arrays.copyOf(input,input.length);
-		
-//		System.out.println("generating next permutation...");
-//		input = new char[] {'d','u'};
-//		System.out.println(input);
-
-		// find the last pair where input[pos-1] < input[pos]
 		boolean found = false;
+		
 		int pos;
-		for (pos = result.length-1; pos > 0; pos--) {
-//			System.out.println(input[pos]);
-			if (result[pos-1] < result[pos]) {
+		for (pos = chars.length-1; pos > 0; pos--) {
+			if (chars[pos-1] < chars[pos]) {
 				found = true;
 				break;
 			}
 		}
-//		System.out.println("position of find: " + pos);
-		
+
 		if (found) {
-			System.out.println("found in " + Arrays.toString(result));
+			
 			char placeholder;
-			
-			
+			int left;
+			int right;
 			
 			// reverse everything from input[pos] to the end
-			
-//			System.out.println("reversing: " + Arrays.toString(result));
-			
-			int left = pos;
-			int right = result.length - 1;
-			
+			// https://stackoverflow.com/questions/2137755/how-do-i-reverse-an-int-array-in-java
+			left = pos;
+			right = chars.length - 1;
 			while (left < right) {
-//				System.out.println(left + " -> " + result[left] + ", " + right + " -> " + result[right]);
-				placeholder = result[left];
-				result[left] = result[right];
-				result[right] = placeholder;
+				placeholder = chars[left];
+				chars[left] = chars[right];
+				chars[right] = placeholder;
 				left++;
 				right--;
 			}
-//			System.out.println("reversed array: " + Arrays.toString(result));
 			
-			// find the smallest element bigger than input[pos-1] and swap it with input[pos-1]
-			
-//			System.out.println("swapping elements...");
-			
+			/*
+			 * Search from input[pos] to the end until you find an element bigger than input[pos-1].
+			 * Swap this element with input[pos].
+			 */
 			left = pos - 1;
 			right = pos;
-			
-			while (result[left] >= result[right]) {
-//				System.out.println("comparing " + result[left] + " with " + result[right]);
+			while (chars[left] >= chars[right]) {
 				right++;
 			}
-			placeholder = result[left];
-			result[left] = result[right];
-			result[right] = placeholder;
+			placeholder = chars[left];
+			chars[left] = chars[right];
+			chars[right] = placeholder;
 			
-			
-			}
+		}
 		
-		
-		return result;
+		return found;
 	}
-	
-	
 
 }
