@@ -12,19 +12,16 @@ public class Main {
         // eg.: TicTacToe.printRandomField();
         // eg.: TicTacToe.printField("X", "", "O", "", "", "", "X", "X", "O");
         
-        String tester;
-        tester = "ab";
-        tester = "aabab";
-        tester = "abcd";
-//        tester = "opqrstuvwxyzjihgfedcba";
-//        tester = "abcdezyxvut";
-//        tester = "678954321";
-        tester = "1234";
-//        tester = "1337";
-//        tester = "a";
-//        tester = "ab";
-//        tester = "aabb";
-        System.out.println(Arrays.toString(PermutationGenerator.listOfPermutations(tester)));
+        System.out.println();
+        System.out.println("Permutation generator: takes a string and generates all possible permutations, "
+        		+ "removing duplicates.");
+        System.out.println("from https://www.codewars.com/kata/5254ca2719453dcc0b00027d");
+        String[] testPermutationGenerator = {"a","ab","abba","1234","1337"};
+        for (String testString : testPermutationGenerator) {
+			System.out.println("testing with \"" + testString + "\"...");
+			System.out.println(Arrays.toString(PermutationGenerator.listOfPermutations(testString)));
+		}
+        System.out.println();
 
     }
 
